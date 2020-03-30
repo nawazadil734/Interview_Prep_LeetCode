@@ -1,3 +1,8 @@
+// basic logic is that, which ever number is present
+// we make it index negative...
+// so which ever index element is not negative
+// that index == number is missing
+
 #include<bits/stdc++.h>
 using namespace std;
 
