@@ -8,16 +8,23 @@ int main() {
     for(int i=0; i<n;i++) {
         cin >> x;
         nums.push_back(x);
-    }   
-    int find = INT_MAX;
-    for(auto n: nums) {
-        if(find > n && n>0) {
-            find = n;
+    }
+    vector<int> :: iterator itr = nums.begin();
+    for(int i=0;i<n;i++) {
+        if(nums[i] <= 0) {
+            nums.erase(itr);
+        }
+        itr++;
+    }
+    sort(nums.begin(), nums.end());
+    int j = 1;
+    for(int i=0;i<n;i++) {
+        if(nums[i] == j) {
+            j++;
+        } else{
+            cout << j << endl;
+            break;
         }
     }
-    int check = 1;
-
-    for(int )
-    cout << find << endl;
     return 0;
 }
